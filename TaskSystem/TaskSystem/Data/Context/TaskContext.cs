@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
+using TaskSystem.Data.Configuration;
 using TaskSystem.Models;
 
 namespace TaskSystem.Data.Context
@@ -10,9 +11,9 @@ namespace TaskSystem.Data.Context
     /// <summary>
     /// Context for Data Access across the project. 
     /// </summary>
-    public class TransactionDomainContext : DbContext, ITaskContext
+    public class TaskContext : DbContext, ITaskContext
     {
-        public TransactionDomainContext(string nameOrConnectionString)
+        public TaskContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
         }
@@ -59,18 +60,19 @@ namespace TaskSystem.Data.Context
             Set<T>().Remove(saved);
         }
 
-        public virtual IDbSet<UserTask> EchoWebServiceRequests { get; set; }
+        public virtual IDbSet<UserTask> Tasks { get; set; }
 
         IQueryable<UserTask> ITaskContext.Tasks
         {
-            get { return EchoWebServiceRequests.AsQueryable(); }
+            get { return Tasks.AsQueryable(); }
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Configurations.Add(new EchoWebServiceRequestConfiguration());
+            modelBuilder.Configurations.Add(new UserTaskEntityConfiguration());
+            modelBuilder.Configurations.Add(new TaskTypeEntityConfiguration());
         }
     }
 }

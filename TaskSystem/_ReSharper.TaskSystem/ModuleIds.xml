@@ -1,3 +1,4 @@
 <Modules>
   <Module PersistentId="6CF683CC-A37B-49A4-AD96-98715903D3BF" ModuleId="TaskSystem" />
+  <Module PersistentId="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" ModuleId="TaskSystem.Tests" />
 </Modules>

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TaskSystem;
 using TaskSystem.Controllers;
+using TaskSystem.Data.Context;
+using TaskSystem.Models;
 
 namespace TaskSystem.Tests.Controllers
 {
@@ -15,6 +18,7 @@ namespace TaskSystem.Tests.Controllers
         [TestMethod]
         public void Index()
         {
+           
             // Arrange
             HomeController controller = new HomeController();
 

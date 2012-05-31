@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Entity" />
@@ -64,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\Configuration\TaskTypeEntityConfiguration.cs" />
     <Compile Include="Data\Configuration\UserTaskEntityConfiguration.cs" />
     <Compile Include="Data\Context\ITaskContext.cs" />
     <Compile Include="Data\Context\TaskContext.cs" />
@@ -71,7 +73,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\UserTask.cs" />
+    <Compile Include="Models\TaskType.cs" />
     <Compile Include="Models\UserTaskType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
