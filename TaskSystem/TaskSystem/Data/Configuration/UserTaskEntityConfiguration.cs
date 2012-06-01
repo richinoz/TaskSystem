@@ -12,6 +12,8 @@ namespace TaskSystem.Data.Configuration
             Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             Property(x => x.UserId).IsRequired();
+            Property(x => x.Priority).IsRequired();
+            Property(x => x.DueDate).IsOptional();
             //HasRequired(a => a.TaskType)
             //   .WithMany().HasForeignKey(x => x.TaskType);
 
