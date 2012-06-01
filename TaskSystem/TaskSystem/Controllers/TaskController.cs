@@ -34,17 +34,6 @@ namespace TaskSystem.Controllers
         {
             var user = Membership.GetUser(true);
 
-            var taskType = _context.TaskTypes.First();
-
-            var task = new UserTask()
-                           {
-                               Name = "test",
-                               UserId = (Guid)user.ProviderUserKey,
-                               UserTaskType = taskType
-                           };
-            _context.Save(task);
-            _context.SaveChanges();
-
             var model = _context.Tasks.Where(x => x.UserId == (Guid)user.ProviderUserKey);
 
             ViewBag.UserName = user.UserName;
@@ -57,22 +46,43 @@ namespace TaskSystem.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            var user = Membership.GetUser(true);
+
+            var taskType = _context.TaskTypes.First();
+
+            var task = new UserTask()
+            {
+                Name = "test",
+                UserId = (Guid)user.ProviderUserKey,
+                UserTaskType = taskType,
+                TaskPriority = 1,
+                DueDate = DateTime.MinValue.SqlValidDateTime()
+
+            };
+
+            return View(task);
         }
 
         //
         // POST: /Task/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(UserTask userTask)
         {
             try
             {
                 // TODO: Add insert logic here
 
+                var user = Membership.GetUser(true);
+
+                userTask.UserId = (Guid)user.ProviderUserKey;
+
+                _context.Save(userTask);
+                _context.SaveChanges();
+
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }

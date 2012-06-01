@@ -1,0 +1,241 @@
+<Configuration>
+  <UnitTestSessions>
+    <Session>
+      <Name>Session #1</Name>
+      <Elements>
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.ContextTests" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.Controllers.HomeControllerTest" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.About" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="About" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.Index" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests.Index" ParentId="TaskSystem.Tests.ContextTests" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+      </Elements>
+    </Session>
+  </UnitTestSessions>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Configuration/f:TaskTypeEntityConfiguration.cs" caret="479" fromTop="14" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="456" fromTop="20" />
+      <File id="AF2EDC1D-A257-4A9F-BF31-CD9C1818257A/f:System.Data.Entity.DbContext.cs" caret="4528" fromTop="13" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:AccountController.cs" caret="607" fromTop="13" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="102" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/f:Web.config" caret="2850" fromTop="26" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="2012" fromTop="3" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="1492" fromTop="33" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTaskType.cs" caret="153" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:TaskType.cs" caret="284" fromTop="10" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Configuration/f:UserTaskEntityConfiguration.cs" caret="526" fromTop="14" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:DependencyResolution/f:IoC.cs" caret="765" fromTop="18" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:App_Start/f:StructuremapMvc.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:DependencyResolution/f:SmDependencyResolver.cs" caret="132" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Details.cshtml" caret="124" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:ITaskContext.cs" caret="312" fromTop="12" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="706" fromTop="19" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="66" fromTop="3" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Create.cshtml" caret="993" fromTop="5" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/d:Controllers/f:TaskControllerTest.cs" caret="772" fromTop="26" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:App.config" caret="598" fromTop="12" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="706" fromTop="19" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/d:Controllers/f:HomeControllerTest.cs" caret="1014" fromTop="29" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="1543" fromTop="21" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="461" fromTop="12" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="539" fromTop="16" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="365" fromTop="13" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="1428" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Details.cshtml" caret="386" fromTop="24" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Details.cshtml" caret="124" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="903" fromTop="37" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="2996" fromTop="30" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="2557" fromTop="10" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="2717" fromTop="15" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="1322" fromTop="23" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="1497" fromTop="27" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="2171" fromTop="29" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:ITaskContext.cs" caret="293" fromTop="10" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="760" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="2072" fromTop="20" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Context/f:TaskContext.cs" caret="2951" fromTop="25" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTaskType.cs" caret="153" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:TaskType.cs" caret="317" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Data/d:Configuration/f:UserTaskEntityConfiguration.cs" caret="526" fromTop="14" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="352" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="352" fromTop="5" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="341" fromTop="15" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="66" fromTop="3" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="170" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="760" fromTop="8" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="1483" fromTop="23" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="1832" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2016" fromTop="26" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="1543" fromTop="21" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="ITaskContext`0" priority="217" />
+      <Item value="Set`0" priority="31" />
+      <Item value="T`0" priority="30" />
+      <Item value="void" priority="63" />
+      <Item value="IuserTasks" priority="32" />
+      <Item value="Tasks" priority="64" />
+      <Item value="UserTask`0" priority="126" />
+      <Item value="public" priority="190" />
+      <Item value="UserTaskEntityConfiguration`0" priority="31" />
+      <Item value="int" priority="31" />
+      <Item value="string" priority="31" />
+      <Item value="class" priority="30" />
+      <Item value="UserTaskType`0" priority="144" />
+      <Item value="Property`1" priority="95" />
+      <Item value="HasRequired`1" priority="95" />
+      <Item value="using" priority="30" />
+      <Item value="TaskSystem" priority="119" />
+      <Item value="new" priority="351" />
+      <Item value="Data" priority="25" />
+      <Item value="Context" priority="25" />
+      <Item value="TaskContext" priority="117" />
+      <Item value="context" priority="287" />
+      <Item value="Name" priority="159" />
+      <Item value="var" priority="159" />
+      <Item value="UserTaskType" priority="85" />
+      <Item value="TaskType" priority="32" />
+      <Item value="EnvironmentVariableTarget`0" priority="31" />
+      <Item value="Assert`0" priority="31" />
+      <Item value="ret" priority="31" />
+      <Item value="userType" priority="31" />
+      <Item value="setup" priority="31" />
+      <Item value="ntc" priority="63" />
+      <Item value="x" priority="95" />
+      <Item value="Route" priority="28" />
+      <Item value="RouteCollection`0" priority="31" />
+      <Item value="long" priority="63" />
+      <Item value="model" priority="61" />
+      <Item value="Model" priority="29" />
+      <Item value="Authorize" priority="63" />
+      <Item value="membershipUser" priority="31" />
+      <Item value="false" priority="31" />
+      <Item value="test" priority="31" />
+      <Item value="user" priority="128" />
+      <Item value="private" priority="31" />
+      <Item value="_context" priority="128" />
+      <Item value="Id" priority="27" />
+      <Item value="UserId" priority="27" />
+      <Item value="taskContext" priority="32" />
+      <Item value="scan" priority="31" />
+      <Item value="Html" priority="29" />
+      <Item value="ViewBag" priority="29" />
+      <Item value="Controllers" priority="31" />
+      <Item value="userTaskType" priority="63" />
+      <Item value="DateTime`0" priority="31" />
+      <Item value="userTask" priority="64" />
+      <Item value="Priority" priority="32" />
+      <Item value="DueDate" priority="32" />
+      <Item value="taskType" priority="31" />
+      <Item value="Exception`0" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
+      <Item value="Remove`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TaskSystem.Models.UserTask">
+      <Item value="TaskType" priority="136" />
+      <Item value="UserId" priority="80" />
+      <Item value="Priority" priority="26" />
+      <Item value="DueDate" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TaskSystem.Data.Context.TaskContext">
+      <Item value="ChangeTracker" priority="26" />
+      <Item value="EchoWebServiceRequests" priority="26" />
+      <Item value="Tasks" priority="131" />
+      <Item value="Save`1" priority="81" />
+      <Item value="SaveChanges`0" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.IDbSet`1">
+      <Item value="Add`0" priority="26" />
+      <Item value="First`1" priority="53" />
+      <Item value="ToList`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="AreEqual`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TaskSystem.Models.UserTaskType">
+      <Item value="Name" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.RequiredNavigationPropertyConfiguration`2">
+      <Item value="WithRequiredDependent`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.ForeignKeyNavigationPropertyConfiguration">
+      <Item value="Equals`0" priority="26" />
+      <Item value="Map`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.ForeignKeyAssociationMappingConfiguration">
+      <Item value="MapKey`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RouteCollection">
+      <Item value="Add`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="model" priority="9" />
+      <Item value="Model" priority="7" />
+      <Item value="Html" priority="7" />
+      <Item value="ViewBag" priority="7" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="HasValue" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.Membership">
+      <Item value="GetUser`0" priority="54" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Security.MembershipUser">
+      <Item value="ProviderUserKey" priority="104" />
+      <Item value="UserName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.PrimitivePropertyConfiguration">
+      <Item value="IsRequired`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Graph.IAssemblyScanner">
+      <Item value="ExcludeType`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Where`1" priority="26" />
+      <Item value="First`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="td" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Database">
+      <Item value="CompatibleWithModel`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TaskSystem.Data.Context.ITaskContext">
+      <Item value="Tasks" priority="26" />
+      <Item value="TaskTypes" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.DateTimePropertyConfiguration">
+      <Item value="IsOptional`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="MinValue" priority="28" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

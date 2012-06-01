@@ -86,6 +86,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DateTimeExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\TaskType.cs" />
     <Compile Include="Models\UserTaskType.cs" />
@@ -168,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Task\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Task\Create.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
