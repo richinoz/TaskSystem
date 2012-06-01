@@ -39,11 +39,6 @@ namespace TaskSystem.Data.Context
             }
         }
 
-        /// <summary>
-        /// Saves Entity
-        /// </summary>
-        /// <typeparam name="T">type of entity</typeparam>
-        /// <param name="entity">entity to be saved</param>
         public void Save<T>(T entity) where T : class
         {
             Set<T>().Add(entity);
@@ -67,12 +62,34 @@ namespace TaskSystem.Data.Context
             get { return Tasks.AsQueryable(); }
         }
 
+        public virtual IDbSet<UserTaskType> TaskTypes { get; set; }
+
+        IQueryable<UserTaskType> ITaskContext.TaskTypes
+        {
+            get { return TaskTypes.AsQueryable(); }
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Configurations.Add(new UserTaskEntityConfiguration());
             modelBuilder.Configurations.Add(new TaskTypeEntityConfiguration());
+        }
+
+        public class Initializer : IDatabaseInitializer<TaskContext>
+        {
+            public void InitializeDatabase(TaskContext context)
+            {
+                if (!context.Database.Exists())
+                {
+                    context.Database.Create();
+
+                    var userTaskType = new UserTaskType() { Name = "Example Task Type" };
+                    context.Save(userTaskType);
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }

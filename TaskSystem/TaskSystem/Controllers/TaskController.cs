@@ -11,9 +11,15 @@ namespace TaskSystem.Controllers
 {
     public class TaskController : Controller
     {
-        private TaskContext _context = new TaskContext("TaskWebsite");
+        private readonly ITaskContext _context;
+
         //
         // GET: /Task/
+
+        public TaskController(ITaskContext taskContext)
+        {
+            _context = taskContext;
+        }
 
         public ActionResult Index()
         {
@@ -28,9 +34,7 @@ namespace TaskSystem.Controllers
         {
             var user = Membership.GetUser(true);
 
-            var taskType = new UserTaskType() { Name = "Task type 1" };
-            _context.Save(taskType);
-            _context.SaveChanges();
+            var taskType = _context.TaskTypes.First();
 
             var task = new UserTask()
                            {
@@ -41,7 +45,11 @@ namespace TaskSystem.Controllers
             _context.Save(task);
             _context.SaveChanges();
 
-            return View(_context.Tasks.ToList());
+            var model = _context.Tasks.Where(x => x.UserId == (Guid)user.ProviderUserKey);
+
+            ViewBag.UserName = user.UserName;
+
+            return View(model);
         }
 
         //

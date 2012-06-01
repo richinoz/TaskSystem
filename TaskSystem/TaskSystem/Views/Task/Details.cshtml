@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Details for @ViewBag.UserName</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,6 +22,7 @@
 
 @foreach (var item in Model) {
     <tr>
+       
         <td>
             @Html.DisplayFor(modelItem => item.UserId)
         </td>
