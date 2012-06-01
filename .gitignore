@@ -4,3 +4,6 @@
 /TaskSystem/TaskSystem/bin
 /TaskSystem/_ReSharper.TaskSystem
 /TaskSystem/TaskSystem/obj
+/TaskSystem/TaskSystem/obj
+/TaskSystem/TaskSystem/App_Data
+/TaskSystem/TaskSystem/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
