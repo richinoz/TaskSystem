@@ -15,9 +15,9 @@ namespace TaskSystem.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult About(int test)
         {
-            return View();
+            return View(test);
         }
     }
 }
