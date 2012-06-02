@@ -8,11 +8,22 @@ using TaskSystem.Models;
 
 namespace TaskSystem.Data.Context
 {
+    public class TestContext : DbContext
+    {
+        public TestContext()
+        {
+        }
+
+        public DbSet<UserTask> UserTasks { get; set; }
+    }
+
     /// <summary>
     /// Context for Data Access across the project. 
     /// </summary>
     public class TaskContext : DbContext, ITaskContext
     {
+        public TaskContext() : base() { }
+
         public TaskContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {

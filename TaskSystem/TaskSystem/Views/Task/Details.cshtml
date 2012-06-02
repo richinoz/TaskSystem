@@ -12,10 +12,13 @@
 <table>
     <tr>
         <th>
-            UserId
+             @Html.ActionLink("Due date", "Details", new{sortColumn = "date"})           
         </th>
         <th>
-            Name
+            @Html.ActionLink("Priority", "Details", new{sortColumn = "priority"})   
+        </th>
+        <th>
+            @Html.ActionLink("Description", "Details", new{sortColumn = "description"})  
         </th>
         <th></th>
     </tr>
@@ -23,11 +26,14 @@
 @foreach (var item in Model) {
     <tr>
        
-        <td>
-            @Html.DisplayFor(modelItem => item.UserId)
+        <td>       
+            @Html.DisplayFor(modelItem => item.DueDate)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.TaskPriority)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

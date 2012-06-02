@@ -17,7 +17,7 @@ namespace TaskSystem.Data.Configuration
             //HasRequired(a => a.TaskType)
             //   .WithMany().HasForeignKey(x => x.TaskType);
 
-            HasRequired(x => x.UserTaskType);
+//HasRequired(x => x.UserTaskType);
 
 
         }

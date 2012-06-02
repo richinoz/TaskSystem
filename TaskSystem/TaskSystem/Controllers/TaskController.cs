@@ -9,6 +9,7 @@ using TaskSystem.Models;
 
 namespace TaskSystem.Controllers
 {
+    [Authorize]
     public class TaskController : Controller
     {
         private readonly ITaskContext _context;
@@ -29,18 +30,38 @@ namespace TaskSystem.Controllers
         //
         // GET: /Task/Details/5
 
-        [Authorize]
-        public ActionResult Details(int id)
+        
+        public ActionResult Details(string sortColumn)
         {
             var user = Membership.GetUser(true);
 
             var model = _context.Tasks.Where(x => x.UserId == (Guid)user.ProviderUserKey);
 
+            if (!string.IsNullOrWhiteSpace(sortColumn))
+            {
+                switch (sortColumn)
+                {
+                    case "date":
+                        model = model.OrderByDescending(x => x.DueDate);
+                        break;
+
+                    case "priority":
+                        model = model.OrderByDescending(x => x.TaskPriority);
+                        break;
+
+                    case "description":
+                        model = model.OrderByDescending(x => x.Description);
+                        break;
+                        
+                }
+                
+            }
+
             ViewBag.UserName = user.UserName;
 
             return View(model);
         }
-
+    
         //
         // GET: /Task/Create
 
@@ -48,13 +69,13 @@ namespace TaskSystem.Controllers
         {
             var user = Membership.GetUser(true);
 
-            var taskType = _context.TaskTypes.First();
+            //var taskType = _context.TaskTypes.First();
 
             var task = new UserTask()
             {
-                Name = "test",
+                Description = "test",
                 UserId = (Guid)user.ProviderUserKey,
-                UserTaskType = taskType,
+               // UserTaskType = taskType,
                 TaskPriority = 1,
                 DueDate = DateTime.MinValue.SqlValidDateTime()
 
@@ -71,19 +92,14 @@ namespace TaskSystem.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
-                var user = Membership.GetUser(true);
-
-                userTask.UserId = (Guid)user.ProviderUserKey;
-
                 _context.Save(userTask);
                 _context.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
             }
             catch (Exception ex)
             {
+                ModelState.AddModelError(string.Empty, ex.ToString());
                 return View();
             }
         }

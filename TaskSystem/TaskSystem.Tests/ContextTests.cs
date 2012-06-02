@@ -26,7 +26,7 @@ namespace TaskSystem.Tests
                 context.Save(taskType);
                 context.SaveChanges();
 
-                var userTask = new UserTask() { Name = "test", UserTaskType = taskType };
+                var userTask = new UserTask() { Description = "test", UserTaskType = taskType };
                 context.Save(userTask);
                 context.SaveChanges();
 
