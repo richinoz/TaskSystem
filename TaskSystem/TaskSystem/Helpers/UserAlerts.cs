@@ -9,13 +9,19 @@ using System.Linq;
 
 namespace TaskSystem.Helpers
 {    
-    internal class UserAlert
-    {
-        public DateTime LastCheck { get; set; }
-        public bool Value { get; set; }
-    }
+    
+    /// <summary>
+    /// UserAlerts class reduces hots on database reads by checking if previous reads
+    /// where successful or not
+    /// </summary>
     public class UserAlerts
     {
+        private class UserAlert
+        {
+            public bool Value { get; set; }
+            public DateTime LastChecked{ get; set; }
+        }
+
         private readonly ITaskContext _taskContext;
 
         public UserAlerts()
@@ -29,12 +35,15 @@ namespace TaskSystem.Helpers
         {
             var user = Membership.GetUser(true);
 
-            var providerUserKey = (Guid)user.ProviderUserKey;
-          
-            var userAlert = _list[providerUserKey];
+            if (user != null)
+            {
+                var providerUserKey = (Guid) user.ProviderUserKey;
 
-            if (userAlert != null)
-                userAlert.Value = true;
+                var userAlert = _list[providerUserKey];
+
+                if (userAlert != null)
+                    userAlert.Value = true;
+            }
 
         }
         [Authorize]
@@ -46,21 +55,22 @@ namespace TaskSystem.Helpers
 
             if(!_list.ContainsKey(providerUserKey))
             {
-                _list.Add(providerUserKey, new UserAlert() {LastCheck = DateTime.Now, Value = true});
+                _list.Add(providerUserKey, new UserAlert() { Value = true, LastChecked = DateTime.Now.Date});
             }
             var userAlert = _list[providerUserKey];            
 
-            if (userAlert.Value)
-            {
-                var date = DateTime.Now.Date;
+            var date = DateTime.Now.Date;
 
+            if (userAlert.Value || userAlert.LastChecked!=date)
+            {
                 var userTasks = _taskContext.Tasks.Where(x => x.UserId == providerUserKey &&
                                 x.DueDate==date);
 
                 var tasks = userTasks.ToList();
 
-
                 userAlert.Value = false;
+                userAlert.LastChecked = DateTime.Now.Date;
+
                 if (tasks.Count > 0)
                     userAlert.Value = true;
 

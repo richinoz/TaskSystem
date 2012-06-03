@@ -31,7 +31,7 @@ namespace TaskSystem.Controllers
         //
         // GET: /Task/Details/5
 
-        
+
         public ActionResult Details(string sortColumn)
         {
             var user = Membership.GetUser(true);
@@ -53,16 +53,16 @@ namespace TaskSystem.Controllers
                     case "description":
                         model = model.OrderByDescending(x => x.Description);
                         break;
-                        
+
                 }
-                
+
             }
 
             ViewBag.UserName = user.UserName;
 
             return View(model);
         }
-    
+
         //
         // GET: /Task/Create
 
@@ -76,7 +76,7 @@ namespace TaskSystem.Controllers
             {
                 Description = "test",
                 UserId = (Guid)user.ProviderUserKey,
-               // UserTaskType = taskType,
+                // UserTaskType = taskType,
                 TaskPriority = 1,
                 DueDate = DateTime.Now.Date.SqlValidDateTime()
 
@@ -89,20 +89,22 @@ namespace TaskSystem.Controllers
         // POST: /Task/Create
 
         [HttpPost]
-        public UpdateActionResult Create(UserTask userTask)
+        public ActionResult Create(UserTask userTask)
         {
             try
             {
-                _context.Save(userTask);
-                _context.SaveChanges();
-
-                return new UpdateActionResult(RedirectToAction("Details"));
+                
+                return new UpdateActionResult(RedirectToAction("Details"), () =>
+                                                  {
+                                                      _context.Save(userTask);
+                                                      _context.SaveChanges();                                                      
+                                                  });
 
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.ToString());
-                return new UpdateActionResult(View());
+                return View();
             }
         }
 
@@ -118,17 +120,16 @@ namespace TaskSystem.Controllers
         // POST: /Task/Edit/5
 
         [HttpPost]
-        public UpdateActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
-
-                return new UpdateActionResult( RedirectToAction("Index"));
+                return new UpdateActionResult(RedirectToAction("Index"), null);
             }
             catch
             {
-                return new UpdateActionResult(View());
+                return View();
             }
         }
 
@@ -144,17 +145,17 @@ namespace TaskSystem.Controllers
         // POST: /Task/Delete/5
 
         [HttpPost]
-        public UpdateActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add delete logic here
 
-                return new UpdateActionResult( RedirectToAction("Index"));
+                return new UpdateActionResult(RedirectToAction("Index"), null);
             }
             catch
             {
-                return new UpdateActionResult( View());
+                return (View());
             }
         }
     }
