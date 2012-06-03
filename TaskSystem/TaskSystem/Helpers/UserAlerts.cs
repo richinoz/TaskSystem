@@ -11,9 +11,9 @@ namespace TaskSystem.Helpers
 {    
     
     /// <summary>
-    /// UserAlerts class reduces hots on database reads by checking if previous reads
-    /// where successful or not
+    /// Only users with tasks for today will hit the database (after inital read)
     /// </summary>
+    [Authorize]
     public class UserAlerts
     {
         private class UserAlert
@@ -39,7 +39,7 @@ namespace TaskSystem.Helpers
             }
 
         }
-        [Authorize]
+       
         public static IEnumerable<UserTask> GetAlertsForUser()
         {
             var user = Membership.GetUser(true);

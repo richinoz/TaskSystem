@@ -8,14 +8,7 @@ using TaskSystem.Models;
 
 namespace TaskSystem.Data.Context
 {
-    public class TestContext : DbContext
-    {
-        public TestContext()
-        {
-        }
-
-        public DbSet<UserTask> UserTasks { get; set; }
-    }
+   
 
     /// <summary>
     /// Context for Data Access across the project. 
@@ -79,19 +72,12 @@ namespace TaskSystem.Data.Context
             get { return Tasks.AsQueryable(); }
         }
 
-        public virtual IDbSet<UserTaskType> TaskTypes { get; set; }
-
-        IQueryable<UserTaskType> ITaskContext.TaskTypes
-        {
-            get { return TaskTypes.AsQueryable(); }
-        }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Configurations.Add(new UserTaskEntityConfiguration());
-            modelBuilder.Configurations.Add(new TaskTypeEntityConfiguration());
+           
         }
 
         public class Initializer : IDatabaseInitializer<TaskContext>
@@ -102,9 +88,6 @@ namespace TaskSystem.Data.Context
                 {
                     context.Database.Create();
 
-                    var userTaskType = new UserTaskType() { Name = "Example Task Type" };
-                    context.Save(userTaskType);
-                    context.SaveChanges();
                 }
             }
         }

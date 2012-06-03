@@ -75,10 +75,8 @@
   <ItemGroup>
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Default1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
-    <Compile Include="Data\Configuration\TaskTypeEntityConfiguration.cs" />
     <Compile Include="Data\Configuration\UserTaskEntityConfiguration.cs" />
     <Compile Include="Data\Context\ITaskContext.cs" />
     <Compile Include="Data\Context\TaskContext.cs" />
@@ -92,7 +90,6 @@
     <Compile Include="Helpers\UserAlerts.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\UserTask.cs" />
-    <Compile Include="Models\UserTaskType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +133,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <None Include="Views\Task\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -179,40 +177,10 @@
     <Content Include="Views\Task\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Test2\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Test2\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Test2\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Test2\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Test2\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Shared\_AlertsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Task\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Default1\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Default1\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Default1\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Default1\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Default1\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Task\Delete.cshtml" />

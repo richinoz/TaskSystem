@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TaskSystem.Data.Context;
@@ -22,17 +23,14 @@ namespace TaskSystem.Tests
         {
             using (var context = new TaskContext("TaskSystemWebsite"))
             {
-                var taskType = new UserTaskType() { Name = "TaskType1" };
-                context.Save(taskType);
-                context.SaveChanges();
 
-                var userTask = new UserTask() { Description = "test", UserTaskType = taskType };
+                var userTask = new UserTask() { Description = "test", DueDate = DateTime.Now, TaskPriority = 1, UserId = Guid.NewGuid()};
                 context.Save(userTask);
                 context.SaveChanges();
 
                 var ret = context.Tasks.First();
 
-                Assert.AreEqual(taskType, ret.UserTaskType);
+                Assert.AreEqual(userTask, ret);
             }
         }
 

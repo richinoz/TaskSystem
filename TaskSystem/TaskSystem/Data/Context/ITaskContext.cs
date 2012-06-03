@@ -12,6 +12,6 @@ namespace TaskSystem.Data.Context
         DbEntityEntry<T> Entry<T>(T entity) where T : class;
 
         IQueryable<UserTask> Tasks { get; }
-        IQueryable<UserTaskType> TaskTypes { get; }
+       
     }
 }

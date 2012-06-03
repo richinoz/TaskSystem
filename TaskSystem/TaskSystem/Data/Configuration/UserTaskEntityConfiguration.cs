@@ -15,10 +15,9 @@ namespace TaskSystem.Data.Configuration
             Property(x => x.TaskPriority).IsRequired();
             Property(x => x.DueDate).IsRequired();
             Property(x => x.Description).IsRequired();
+
             //HasRequired(a => a.TaskType)
             //   .WithMany().HasForeignKey(x => x.TaskType);
-
-//HasRequired(x => x.UserTaskType);
 
 
         }

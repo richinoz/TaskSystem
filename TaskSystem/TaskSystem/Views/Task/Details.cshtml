@@ -2,7 +2,17 @@
 
 @{
     ViewBag.Title = "Details";
+    if (Request.IsAjaxRequest())
+    {
+        Layout = null;
+    }
+    else
+    {
+        <script src="../../Scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+    }
 }
+
+<div id="resultsDiv">
 
 <h2>Details for @ViewBag.UserName</h2>
 
@@ -12,18 +22,21 @@
 <table>
     <tr>
         <th>
-             @Html.ActionLink("Due date", "Details", new{sortColumn = "date"})           
+             @Ajax.ActionLink("Due date", "Details", new { sortColumn = "date" }, new AjaxOptions() { UpdateTargetId = "resultsDiv" })           
         </th>
         <th>
-            @Html.ActionLink("Priority", "Details", new{sortColumn = "priority"})   
+             @Ajax.ActionLink("Priority", "Details", new { sortColumn = "priority" }, new AjaxOptions() { UpdateTargetId = "resultsDiv" })    
+
         </th>
         <th>
-            @Html.ActionLink("Description", "Details", new{sortColumn = "description"})  
+            @Ajax.ActionLink("Description", "Details", new { sortColumn = "description" }, new AjaxOptions() { UpdateTargetId = "resultsDiv" })                
         </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
+    
+    
+@foreach (var item in Model)
+{
     <tr>
        
         <td>       
@@ -36,10 +49,10 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |        
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |        
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
 }
-
 </table>
+</div>

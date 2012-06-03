@@ -11,6 +11,10 @@ using TaskSystem.Models;
 
 namespace TaskSystem.Controllers
 {
+    public class ViewModel
+    {
+        public Guid Test { get; set; }
+    }
     [Authorize]
     public class TaskController : Controller
     {
@@ -26,23 +30,34 @@ namespace TaskSystem.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var user = Membership.GetUser(true);
+            return View(new ViewModel() { Test = (Guid)user.ProviderUserKey });
         }
 
-        //
-        // GET: /Task/Details/5
+        [HttpPost]
+        public ActionResult Index(ViewModel userKey)
+        {
+            var user = Membership.GetUser(true);
 
+            var query = _context.Tasks.Where(x => x.UserId == (Guid)user.ProviderUserKey);
+
+            var list = query.ToList();
+
+            if (Request.IsAjaxRequest())
+                return PartialView("Details", list);
+
+            return null;
+        }
 
         public ActionResult Details(string sortColumn)
         {
             var user = Membership.GetUser(true);
 
             var model = _context.Tasks.Where(x => x.UserId == (Guid)user.ProviderUserKey);
+            bool sortAsc = true;
 
             if (!string.IsNullOrWhiteSpace(sortColumn))
             {
-                bool sortAsc = true;
-
                 if (TempData[sortColumn] == null)
                 {
                     TempData[sortColumn] = true;
@@ -50,50 +65,36 @@ namespace TaskSystem.Controllers
                 sortAsc = (bool)TempData[sortColumn];
                 TempData[sortColumn] = !sortAsc;
 
-                if(sortAsc)
+
+                switch (sortColumn)
                 {
-                    switch (sortColumn)
-                    {
 
-                        case "date":
-                            model = model.OrderBy(x => x.DueDate);
-                            break;
+                    case "date":
+                        model = model.OrderBy(x => x.DueDate);
+                        break;
 
-                        case "priority":
-                            model = model.OrderBy(x => x.TaskPriority);
-                            break;
+                    case "priority":
+                        model = model.OrderBy(x => x.TaskPriority);
+                        break;
 
-                        case "description":
-                            model = model.OrderBy(x => x.Description);
-                            break;
+                    case "description":
+                        model = model.OrderBy(x => x.Description);
+                        break;
 
-                    }
-                }
-                else
-                {
-                    switch (sortColumn)
-                    {
-
-                        case "date":
-                            model = model.OrderByDescending(x => x.DueDate);
-                            break;
-
-                        case "priority":
-                            model = model.OrderByDescending(x => x.TaskPriority);
-                            break;
-
-                        case "description":
-                            model = model.OrderByDescending(x => x.Description);
-                            break;
-
-                    }
                 }
 
             }
 
+            var list = model.ToList();
+            if (!sortAsc)
+                list.Reverse();
+
             ViewBag.UserName = user.UserName;
 
-            return View(model);
+            if (Request.IsAjaxRequest())
+                return PartialView(list);
+
+            return View(list);
         }
 
         //
@@ -105,10 +106,10 @@ namespace TaskSystem.Controllers
 
             var task = new UserTask()
             {
-                Description = "test",
+
                 UserId = (Guid)user.ProviderUserKey,
                 TaskPriority = 1,
-                DueDate = DateTime.Now.Date.SqlValidDateTime()
+                DueDate = DateTime.Now.Date
 
             };
 
@@ -123,11 +124,11 @@ namespace TaskSystem.Controllers
         {
             try
             {
-                
+
                 return new UpdateActionResult(RedirectToAction("Details"), () =>
                                                   {
                                                       _context.Save(userTask);
-                                                      _context.SaveChanges();                                                      
+                                                      _context.SaveChanges();
                                                   });
 
             }
@@ -143,7 +144,7 @@ namespace TaskSystem.Controllers
 
         public ActionResult Edit(int id)
         {
-            var task = _context.Tasks.FirstOrDefault(x=>x.Id==id);
+            var task = _context.Tasks.FirstOrDefault(x => x.Id == id);
             return View(task);
         }
 
@@ -159,7 +160,7 @@ namespace TaskSystem.Controllers
                 {
                     return new UpdateActionResult(RedirectToAction("Details"), () =>
                                 {
-                                    _context.Entry(userTask).State = EntityState.Modified;                                                                                       
+                                    _context.Entry(userTask).State = EntityState.Modified;
                                     _context.SaveChanges();
                                 });
                 }
@@ -176,7 +177,7 @@ namespace TaskSystem.Controllers
 
         public ActionResult Delete(int id)
         {
-            var task = _context.Tasks.FirstOrDefault(x=>x.Id ==id);
+            var task = _context.Tasks.FirstOrDefault(x => x.Id == id);
             return View(task);
         }
 
@@ -188,11 +189,11 @@ namespace TaskSystem.Controllers
         {
             try
             {
-                var task = _context.Tasks.FirstOrDefault(x=>x.Id==usertask.Id);
+                var task = _context.Tasks.FirstOrDefault(x => x.Id == usertask.Id);
 
-                return new UpdateActionResult(RedirectToAction("Details"), ()=>
+                return new UpdateActionResult(RedirectToAction("Details"), () =>
                                     {
-                                         _context.Remove(task);     
+                                        _context.Remove(task);
                                         _context.SaveChanges();
                                     });
             }

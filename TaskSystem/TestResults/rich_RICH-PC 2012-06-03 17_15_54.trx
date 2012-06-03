@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8cc4aba1-346e-43b9-a994-78343c6e52ec" name="rich@RICH-PC 2012-06-03 17:15:54" runUser="rich-PC\rich" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="1aff4c76-5b56-4c66-902a-2c3bb4c6aab6">
+    <Deployment runDeploymentRoot="rich_RICH-PC 2012-06-03 17_15_54">
+      <DeploymentItem filename="C:\Projects\TaskSystem\TaskSystem\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Projects\TaskSystem\TaskSystem\TaskSystem\bin\TaskSystem.dll" />
+      <DeploymentItem filename="C:\Projects\TaskSystem\TaskSystem\packages\structuremap.2.6.3\lib\StructureMap.dll" />
+      <DeploymentItem filename="C:\Projects\TaskSystem\TaskSystem\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="C:\Projects\TaskSystem\TaskSystem\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-03T17:15:54.1813734+10:00" queuing="2012-06-03T17:15:56.8101185+10:00" start="2012-06-03T17:15:56.9431261+10:00" finish="2012-06-03T17:16:00.2109079+10:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\projects\tasksystem\tasksystem\tasksystem.tests\bin\debug\tasksystem.tests.dll" id="a2a2bbb0-a406-759b-67e0-1e37743075ea">
+      <Execution id="34379fb5-c784-4090-b9bd-796cbd3e4fee" />
+      <TestMethod codeBase="C:/Projects/TaskSystem/TaskSystem/TaskSystem.Tests/bin/Debug/TaskSystem.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TaskSystem.Tests.ContextTests, TaskSystem.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="a2a2bbb0-a406-759b-67e0-1e37743075ea" executionId="34379fb5-c784-4090-b9bd-796cbd3e4fee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="34379fb5-c784-4090-b9bd-796cbd3e4fee" testId="a2a2bbb0-a406-759b-67e0-1e37743075ea" testName="Index" computerName="RICH-PC" duration="00:00:01.6970586" startTime="2012-06-03T17:15:57.3621501+10:00" endTime="2012-06-03T17:15:59.7518816+10:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34379fb5-c784-4090-b9bd-796cbd3e4fee">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TaskSystem.Tests.ContextTests.Index threw exception: 
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.</Message>
+          <StackTrace>    at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at TaskSystem.Tests.ContextTests.Index() in C:\Projects\TaskSystem\TaskSystem\TaskSystem.Tests\ContextTests.cs:line 28
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
