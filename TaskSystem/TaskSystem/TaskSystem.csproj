@@ -87,6 +87,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DateTimeExtensions.cs" />
+    <Compile Include="Helpers\UpdateActionResult.cs" />
     <Compile Include="Helpers\UserAlerts.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\UserTask.cs" />

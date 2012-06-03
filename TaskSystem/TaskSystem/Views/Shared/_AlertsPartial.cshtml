@@ -1,7 +1,15 @@
-﻿@if(Request.IsAuthenticated) {
-    <text>Welcome <strong>@User.Identity.Name</strong>!
-    [ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
-}
-else {
-    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+﻿@using TaskSystem.Helpers
+@if (Request.IsAuthenticated)
+{
+
+     <text>Today's reminders for <strong>@User.Identity.Name</strong></text>
+
+ var ret = new UserAlerts().GetAlertsForUser();
+ foreach (var userTask in ret)
+ {
+        <div>
+        @Html.DisplayFor(model => userTask.Description)
+        </div>
+    }                            
+
 }

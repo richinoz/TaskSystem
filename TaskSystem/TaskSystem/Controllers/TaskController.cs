@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using TaskSystem.Data.Context;
+using TaskSystem.Helpers;
 using TaskSystem.Models;
 
 namespace TaskSystem.Controllers
@@ -77,7 +78,7 @@ namespace TaskSystem.Controllers
                 UserId = (Guid)user.ProviderUserKey,
                // UserTaskType = taskType,
                 TaskPriority = 1,
-                DueDate = DateTime.MinValue.SqlValidDateTime()
+                DueDate = DateTime.Now.Date.SqlValidDateTime()
 
             };
 
@@ -88,19 +89,20 @@ namespace TaskSystem.Controllers
         // POST: /Task/Create
 
         [HttpPost]
-        public ActionResult Create(UserTask userTask)
+        public UpdateActionResult Create(UserTask userTask)
         {
             try
             {
                 _context.Save(userTask);
                 _context.SaveChanges();
 
-                return RedirectToAction("Details");
+                return new UpdateActionResult(RedirectToAction("Details"));
+
             }
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.ToString());
-                return View();
+                return new UpdateActionResult(View());
             }
         }
 
@@ -116,17 +118,17 @@ namespace TaskSystem.Controllers
         // POST: /Task/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public UpdateActionResult Edit(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                return new UpdateActionResult( RedirectToAction("Index"));
             }
             catch
             {
-                return View();
+                return new UpdateActionResult(View());
             }
         }
 
@@ -142,17 +144,17 @@ namespace TaskSystem.Controllers
         // POST: /Task/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public UpdateActionResult Delete(int id, FormCollection collection)
         {
             try
             {
                 // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
+                return new UpdateActionResult( RedirectToAction("Index"));
             }
             catch
             {
-                return View();
+                return new UpdateActionResult( View());
             }
         }
     }
