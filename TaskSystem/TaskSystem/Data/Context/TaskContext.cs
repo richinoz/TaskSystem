@@ -55,6 +55,12 @@ namespace TaskSystem.Data.Context
             Set<T>().Add(entity);
         }
 
+        public void Remove<T>(T entity) where T : class
+        {
+            Set<T>().Remove(entity);
+        }
+
+
         /// <summary>
         /// Deletes Entity
         /// </summary>

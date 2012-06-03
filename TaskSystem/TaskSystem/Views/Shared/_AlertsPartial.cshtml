@@ -4,11 +4,11 @@
 
      <text>Today's reminders for <strong>@User.Identity.Name</strong></text>
 
- var ret = new UserAlerts().GetAlertsForUser();
+ var ret =  UserAlerts.GetAlertsForUser();
  foreach (var userTask in ret)
  {
         <div>
-        @Html.DisplayFor(model => userTask.Description)
+            @Html.ActionLink(userTask.Description, "Edit", "Task", new { id = userTask.Id }, null)
         </div>
     }                            
 

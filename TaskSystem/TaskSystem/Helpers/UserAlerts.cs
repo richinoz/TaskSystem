@@ -22,13 +22,6 @@ namespace TaskSystem.Helpers
             public DateTime LastChecked{ get; set; }
         }
 
-        private readonly ITaskContext _taskContext;
-
-        public UserAlerts()
-        {
-            _taskContext = StructureMap.ObjectFactory.GetInstance<ITaskContext>();
-        }
-
         private static Dictionary<Guid, UserAlert> _list = new Dictionary<Guid, UserAlert>();
 
         public static void UpdateUser()
@@ -47,7 +40,7 @@ namespace TaskSystem.Helpers
 
         }
         [Authorize]
-        public IEnumerable<UserTask> GetAlertsForUser()
+        public static IEnumerable<UserTask> GetAlertsForUser()
         {
             var user = Membership.GetUser(true);
 
@@ -63,7 +56,8 @@ namespace TaskSystem.Helpers
 
             if (userAlert.Value || userAlert.LastChecked!=date)
             {
-                var userTasks = _taskContext.Tasks.Where(x => x.UserId == providerUserKey &&
+                ITaskContext taskContext = StructureMap.ObjectFactory.GetInstance<ITaskContext>();
+                var userTasks = taskContext.Tasks.Where(x => x.UserId == providerUserKey &&
                                 x.DueDate==date);
 
                 var tasks = userTasks.ToList();
@@ -78,5 +72,7 @@ namespace TaskSystem.Helpers
             }
             return new List<UserTask>();
         }
+
+        
     }
 }

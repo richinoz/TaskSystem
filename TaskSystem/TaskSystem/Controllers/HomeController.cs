@@ -16,10 +16,10 @@ namespace TaskSystem.Controllers
             return View();
         }
 
-        [Authorize]
-        public ActionResult About(int test)
+       
+        public ActionResult About()
         {
-            return View(test.ToString());
+            return View();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -40,20 +41,52 @@ namespace TaskSystem.Controllers
 
             if (!string.IsNullOrWhiteSpace(sortColumn))
             {
-                switch (sortColumn)
+                bool sortAsc = true;
+
+                if (TempData[sortColumn] == null)
                 {
-                    case "date":
-                        model = model.OrderByDescending(x => x.DueDate);
-                        break;
+                    TempData[sortColumn] = true;
+                }
+                sortAsc = (bool)TempData[sortColumn];
+                TempData[sortColumn] = !sortAsc;
 
-                    case "priority":
-                        model = model.OrderByDescending(x => x.TaskPriority);
-                        break;
+                if(sortAsc)
+                {
+                    switch (sortColumn)
+                    {
 
-                    case "description":
-                        model = model.OrderByDescending(x => x.Description);
-                        break;
+                        case "date":
+                            model = model.OrderBy(x => x.DueDate);
+                            break;
 
+                        case "priority":
+                            model = model.OrderBy(x => x.TaskPriority);
+                            break;
+
+                        case "description":
+                            model = model.OrderBy(x => x.Description);
+                            break;
+
+                    }
+                }
+                else
+                {
+                    switch (sortColumn)
+                    {
+
+                        case "date":
+                            model = model.OrderByDescending(x => x.DueDate);
+                            break;
+
+                        case "priority":
+                            model = model.OrderByDescending(x => x.TaskPriority);
+                            break;
+
+                        case "description":
+                            model = model.OrderByDescending(x => x.Description);
+                            break;
+
+                    }
                 }
 
             }
@@ -70,13 +103,10 @@ namespace TaskSystem.Controllers
         {
             var user = Membership.GetUser(true);
 
-            //var taskType = _context.TaskTypes.First();
-
             var task = new UserTask()
             {
                 Description = "test",
                 UserId = (Guid)user.ProviderUserKey,
-                // UserTaskType = taskType,
                 TaskPriority = 1,
                 DueDate = DateTime.Now.Date.SqlValidDateTime()
 
@@ -113,19 +143,27 @@ namespace TaskSystem.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            var task = _context.Tasks.FirstOrDefault(x=>x.Id==id);
+            return View(task);
         }
 
         //
         // POST: /Task/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(UserTask userTask)
         {
             try
             {
-                // TODO: Add update logic here
-                return new UpdateActionResult(RedirectToAction("Index"), null);
+                if (ModelState.IsValid)
+                {
+                    return new UpdateActionResult(RedirectToAction("Details"), () =>
+                                {
+                                    _context.Entry(userTask).State = EntityState.Modified;                                                                                       
+                                    _context.SaveChanges();
+                                });
+                }
+                return View();
             }
             catch
             {
@@ -138,20 +176,25 @@ namespace TaskSystem.Controllers
 
         public ActionResult Delete(int id)
         {
-            return View();
+            var task = _context.Tasks.FirstOrDefault(x=>x.Id ==id);
+            return View(task);
         }
 
         //
         // POST: /Task/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(UserTask usertask)
         {
             try
             {
-                // TODO: Add delete logic here
+                var task = _context.Tasks.FirstOrDefault(x=>x.Id==usertask.Id);
 
-                return new UpdateActionResult(RedirectToAction("Index"), null);
+                return new UpdateActionResult(RedirectToAction("Details"), ()=>
+                                    {
+                                         _context.Remove(task);     
+                                        _context.SaveChanges();
+                                    });
             }
             catch
             {
