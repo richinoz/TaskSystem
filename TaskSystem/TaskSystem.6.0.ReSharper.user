@@ -6,17 +6,21 @@
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.ContextTests" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.Controllers.HomeControllerTest" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.About" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="About" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
-        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests.Index" ParentId="TaskSystem.Tests.ContextTests" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.Index" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests.Index" ParentId="TaskSystem.Tests.ContextTests" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
       </Elements>
     </Session>
   </UnitTestSessions>
   <RecentFiles>
     <RecentFiles>
       <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2226" fromTop="12" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="818" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="59" fromTop="2" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="5" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="327" fromTop="8" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="244" fromTop="12" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="340" fromTop="11" />
     </RecentFiles>
     <RecentEdits>
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="2801" fromTop="9" />
@@ -31,6 +35,14 @@
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="0" fromTop="0" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="263" fromTop="12" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="164" fromTop="8" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="730" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="164" fromTop="5" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="495" fromTop="15" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="571" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="290" fromTop="3" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="571" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -42,11 +54,11 @@
       <Item value="IuserTasks" priority="32" />
       <Item value="Tasks" priority="64" />
       <Item value="UserTask`0" priority="126" />
-      <Item value="public" priority="222" />
+      <Item value="public" priority="285" />
       <Item value="UserTaskEntityConfiguration`0" priority="31" />
       <Item value="int" priority="31" />
       <Item value="string" priority="31" />
-      <Item value="class" priority="30" />
+      <Item value="class" priority="61" />
       <Item value="UserTaskType`0" priority="144" />
       <Item value="Property`1" priority="95" />
       <Item value="HasRequired`1" priority="95" />
@@ -58,7 +70,7 @@
       <Item value="TaskContext" priority="117" />
       <Item value="context" priority="287" />
       <Item value="Name" priority="159" />
-      <Item value="var" priority="159" />
+      <Item value="var" priority="191" />
       <Item value="UserTaskType" priority="85" />
       <Item value="TaskType" priority="32" />
       <Item value="EnvironmentVariableTarget`0" priority="31" />
@@ -75,9 +87,9 @@
       <Item value="Model" priority="29" />
       <Item value="Authorize" priority="63" />
       <Item value="membershipUser" priority="31" />
-      <Item value="false" priority="31" />
+      <Item value="false" priority="63" />
       <Item value="test" priority="31" />
-      <Item value="user" priority="128" />
+      <Item value="user" priority="160" />
       <Item value="private" priority="63" />
       <Item value="_context" priority="128" />
       <Item value="Id" priority="27" />
@@ -96,9 +108,14 @@
       <Item value="Exception`0" priority="31" />
       <Item value="static" priority="31" />
       <Item value="_dateTime" priority="96" />
-      <Item value="if" priority="63" />
+      <Item value="if" priority="127" />
       <Item value="date" priority="63" />
       <Item value="else" priority="31" />
+      <Item value="AuthorizeAttribute`0" priority="63" />
+      <Item value="override" priority="31" />
+      <Item value="return" priority="63" />
+      <Item value="true" priority="31" />
+      <Item value="FormsAuthentication`0" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
       <Item value="Remove`0" priority="27" />
@@ -150,7 +167,7 @@
       <Item value="HasValue" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Web.Security.Membership">
-      <Item value="GetUser`0" priority="54" />
+      <Item value="GetUser`0" priority="81" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Security.MembershipUser">
       <Item value="ProviderUserKey" priority="104" />
@@ -196,6 +213,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="Count`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.FormsAuthentication">
+      <Item value="SignOut`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

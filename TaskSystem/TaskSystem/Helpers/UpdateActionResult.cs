@@ -9,7 +9,7 @@ namespace TaskSystem.Helpers
     public class UpdateActionResult : ActionResult
     {
         private readonly ActionResult _actionResult;
-        private Action _action { get;  set; }
+        private Action _action { get; set; }
 
         public UpdateActionResult(ActionResult actionResult, Action action)
         {
@@ -19,13 +19,13 @@ namespace TaskSystem.Helpers
 
         public override void ExecuteResult(ControllerContext context)
         {
-            if(_action!=null)
+            if (_action != null)
                 _action.Invoke();
 
             UserAlerts.UpdateUser();
 
             _actionResult.ExecuteResult(context);
-            
+
         }
     }
 }

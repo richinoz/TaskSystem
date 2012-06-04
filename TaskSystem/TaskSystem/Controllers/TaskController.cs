@@ -11,11 +11,8 @@ using TaskSystem.Models;
 
 namespace TaskSystem.Controllers
 {
-    public class ViewModel
-    {
-        public Guid Test { get; set; }
-    }
-    [Authorize]
+
+    [AuthorizeTaskSystem]
     public class TaskController : Controller
     {
         private readonly ITaskContext _context;
@@ -26,27 +23,6 @@ namespace TaskSystem.Controllers
         public TaskController(ITaskContext taskContext)
         {
             _context = taskContext;
-        }
-
-        public ActionResult Index()
-        {
-            var user = Membership.GetUser(true);
-            return View(new ViewModel() { Test = (Guid)user.ProviderUserKey });
-        }
-
-        [HttpPost]
-        public ActionResult Index(ViewModel userKey)
-        {
-            var user = Membership.GetUser(true);
-
-            var query = _context.Tasks.Where(x => x.UserId == (Guid)user.ProviderUserKey);
-
-            var list = query.ToList();
-
-            if (Request.IsAjaxRequest())
-                return PartialView("Details", list);
-
-            return null;
         }
 
         public ActionResult Details(string sortColumn)
