@@ -2,9 +2,16 @@
 @if (Request.IsAuthenticated)
 {
 
-     <text>Today's reminders for <strong>@User.Identity.Name</strong></text>
 
  var ret =  UserAlerts.GetAlertsForUser();
+ if (ret.Count() > 0)
+ {
+         <text>Today's tasks for <strong>@User.Identity.Name</strong></text>
+ }
+ else
+ {
+         <text>No tasks today for <strong>@User.Identity.Name</strong></text>
+ }
  foreach (var userTask in ret)
  {
         <div>

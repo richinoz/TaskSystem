@@ -24,7 +24,7 @@ namespace TaskSystem.Tests
             using (var context = new TaskContext("TaskSystemWebsite"))
             {
 
-                var userTask = new UserTask() { Description = "test", DueDate = DateTime.Now, TaskPriority = 1, UserId = Guid.NewGuid()};
+                var userTask = new UserTask() { Description = "test", DueDate = DateTime.Now, TaskPriority = 1, UserId = Guid.NewGuid() };
                 context.Save(userTask);
                 context.SaveChanges();
 

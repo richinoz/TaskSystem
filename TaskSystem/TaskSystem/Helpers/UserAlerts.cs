@@ -8,8 +8,8 @@ using TaskSystem.Models;
 using System.Linq;
 
 namespace TaskSystem.Helpers
-{    
-    
+{
+
     /// <summary>
     /// Only users with tasks for today will hit the database (after inital read)
     /// </summary>
@@ -19,46 +19,62 @@ namespace TaskSystem.Helpers
         private class UserAlert
         {
             public bool Value { get; set; }
-            public DateTime LastChecked{ get; set; }
+            public DateTime LastChecked { get; set; }
         }
 
-        private static Dictionary<Guid, UserAlert> _list = new Dictionary<Guid, UserAlert>();
-
+        private static Dictionary<Guid, UserAlert> _userList = new Dictionary<Guid, UserAlert>();
+        private static DateTime _listCreateDate = DateTime.Now.Date;
+        /// <summary>
+        /// Force GetAlertsForUser() to search datasource
+        /// </summary>
         public static void UpdateUser()
         {
             var user = Membership.GetUser(true);
 
             if (user != null)
             {
-                var providerUserKey = (Guid) user.ProviderUserKey;
+                var providerUserKey = (Guid)user.ProviderUserKey;
 
-                var userAlert = _list[providerUserKey];
+                var userAlert = _userList[providerUserKey];
 
                 if (userAlert != null)
                     userAlert.Value = true;
             }
 
         }
-       
+
+        /// <summary>
+        /// gets or creates current user task status
+        /// </summary>
+        /// <returns></returns>
         public static IEnumerable<UserTask> GetAlertsForUser()
         {
-            var user = Membership.GetUser(true);
-
-            var providerUserKey = (Guid)user.ProviderUserKey;   
-
-            if(!_list.ContainsKey(providerUserKey))
-            {
-                _list.Add(providerUserKey, new UserAlert() { Value = true, LastChecked = DateTime.Now.Date});
-            }
-            var userAlert = _list[providerUserKey];            
-
             var date = DateTime.Now.Date;
 
-            if (userAlert.Value || userAlert.LastChecked!=date)
+            if (_listCreateDate.AddDays(1) < date)
+            {
+                //clear list if over a day old - to prevent list continually growing
+                _userList.Clear();
+                _listCreateDate = date;
+            }
+
+            var user = Membership.GetUser(true);
+
+            var providerUserKey = (Guid)user.ProviderUserKey;
+
+            if (!_userList.ContainsKey(providerUserKey))
+            {
+                _userList.Add(providerUserKey, new UserAlert() { Value = true, LastChecked = DateTime.Now.Date });
+            }
+            var userAlert = _userList[providerUserKey];
+
+
+
+            if (userAlert.Value || userAlert.LastChecked != date)
             {
                 ITaskContext taskContext = StructureMap.ObjectFactory.GetInstance<ITaskContext>();
                 var userTasks = taskContext.Tasks.Where(x => x.UserId == providerUserKey &&
-                                x.DueDate==date);
+                                x.DueDate == date);
 
                 var tasks = userTasks.ToList();
 
@@ -73,6 +89,6 @@ namespace TaskSystem.Helpers
             return new List<UserTask>();
         }
 
-        
+
     }
 }
