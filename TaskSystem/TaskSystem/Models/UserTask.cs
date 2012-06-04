@@ -16,11 +16,13 @@ namespace TaskSystem.Models
         public string Description { get; set; }
 
         [Required]
-        [Range(1,9)]
+        [Range(1, 9)]
+        [Display(Name = "Task priority")]
         public int TaskPriority { get; set; }
 
         [Required]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [Display(Name = "Due date")]
         public DateTime DueDate { get; set; }
 
     }
