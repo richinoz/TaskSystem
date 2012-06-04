@@ -6,8 +6,8 @@
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.ContextTests" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.Controllers.HomeControllerTest" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.About" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="About" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
-        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests.Index" ParentId="TaskSystem.Tests.ContextTests" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.Index" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests.Index" ParentId="TaskSystem.Tests.ContextTests" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
       </Elements>
     </Session>
   </UnitTestSessions>
@@ -19,30 +19,20 @@
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="66" fromTop="5" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="212" fromTop="11" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="408" fromTop="20" />
-      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="602" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="841" fromTop="26" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:PageViewModel.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Page/f:Error.cshtml" caret="129" fromTop="7" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="208" fromTop="8" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTask.cs" caret="591" fromTop="23" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4501" fromTop="27" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="217" fromTop="9" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="84" fromTop="4" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="841" fromTop="26" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:ElmahHandledErrorLoggerFilter.cs" caret="334" fromTop="10" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3585" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="602" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3396" fromTop="30" />
     </RecentFiles>
     <RecentEdits>
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="353" fromTop="1" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1850" fromTop="12" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1558" fromTop="8" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="419" fromTop="10" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="212" fromTop="11" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="316" fromTop="4" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="316" fromTop="15" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="150" fromTop="7" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="499" fromTop="22" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="338" fromTop="15" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="435" fromTop="23" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3265" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3731" fromTop="17" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="423" fromTop="14" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2854" fromTop="24" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2575" fromTop="20" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3731" fromTop="33" />
@@ -58,7 +48,21 @@
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="84" fromTop="5" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="189" fromTop="6" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="602" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3585" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4250" fromTop="27" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="284" fromTop="6" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="284" fromTop="4" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4728" fromTop="2" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4728" fromTop="3" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="132" fromTop="4" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="208" fromTop="13" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="266" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="330" fromTop="12" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="905" fromTop="30" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Page/f:Error.cshtml" caret="33" fromTop="1" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Page/f:Error.cshtml" caret="97" fromTop="5" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4250" fromTop="23" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4501" fromTop="27" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3729" fromTop="31" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -72,7 +76,7 @@
       <Item value="UserTask`0" priority="126" />
       <Item value="public" priority="379" />
       <Item value="UserTaskEntityConfiguration`0" priority="31" />
-      <Item value="int" priority="63" />
+      <Item value="int" priority="127" />
       <Item value="string" priority="31" />
       <Item value="class" priority="92" />
       <Item value="UserTaskType`0" priority="144" />
@@ -144,6 +148,7 @@
       <Item value="View`0" priority="32" />
       <Item value="ModelState`0" priority="31" />
       <Item value="Display" priority="31" />
+      <Item value="i" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
       <Item value="Remove`0" priority="27" />

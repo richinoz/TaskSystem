@@ -7,7 +7,6 @@ using System.Web.Security;
 
 namespace TaskSystem.Models
 {
-
     public class ChangePasswordModel
     {
         [Required]
