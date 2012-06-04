@@ -6,63 +6,67 @@
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.ContextTests" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestClassElement" TypeName="TaskSystem.Tests.Controllers.HomeControllerTest" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.About" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="About" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
-        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.Index" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
         <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.ContextTests.Index" ParentId="TaskSystem.Tests.ContextTests" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
+        <UnitTestElement Provider="MSTest" Id="TaskSystem.Tests.Controllers.HomeControllerTest.Index" ParentId="TaskSystem.Tests.Controllers.HomeControllerTest" type="MsTestTestMethodElement" MethodName="Index" Project="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE" />
       </Elements>
     </Session>
   </UnitTestSessions>
   <RecentFiles>
     <RecentFiles>
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="0" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1035" fromTop="9" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_Layout.cshtml" caret="940" fromTop="19" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="66" fromTop="5" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="212" fromTop="11" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="408" fromTop="20" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:PageViewModel.cs" caret="0" fromTop="0" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Page/f:Error.cshtml" caret="129" fromTop="7" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="208" fromTop="8" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Edit.cshtml" caret="385" fromTop="13" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTask.cs" caret="591" fromTop="23" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4501" fromTop="27" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="217" fromTop="9" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="84" fromTop="4" />
-      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="841" fromTop="26" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:ElmahHandledErrorLoggerFilter.cs" caret="334" fromTop="10" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="602" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3396" fromTop="30" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="217" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Create.cshtml" caret="294" fromTop="12" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Delete.cshtml" caret="148" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Details.cshtml" caret="365" fromTop="17" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="837" fromTop="25" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1973" fromTop="26" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4789" fromTop="19" />
     </RecentFiles>
     <RecentEdits>
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2854" fromTop="24" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2575" fromTop="20" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3731" fromTop="33" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4386" fromTop="20" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="768" fromTop="21" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1014" fromTop="30" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4223" fromTop="18" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3809" fromTop="19" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTask.cs" caret="710" fromTop="23" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTask.cs" caret="710" fromTop="19" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:UserTask.cs" caret="450" fromTop="19" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3428" fromTop="17" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="84" fromTop="5" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="189" fromTop="6" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Global.asax.cs" caret="602" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4250" fromTop="27" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="284" fromTop="6" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="284" fromTop="4" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4728" fromTop="2" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4728" fromTop="3" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="132" fromTop="4" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="208" fromTop="13" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Models/f:AccountModels.cs" caret="266" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="330" fromTop="12" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:PageController.cs" caret="905" fromTop="30" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Page/f:Error.cshtml" caret="33" fromTop="1" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Page/f:Error.cshtml" caret="97" fromTop="5" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4250" fromTop="23" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/f:Web.config" caret="4501" fromTop="27" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3729" fromTop="31" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="5" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="17" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="600" fromTop="17" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1143" fromTop="16" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1143" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1143" fromTop="28" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1143" fromTop="27" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="18" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="5" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="600" fromTop="19" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="1" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1143" fromTop="33" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="369" fromTop="14" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="322" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3122" fromTop="21" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4184" fromTop="24" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4217" fromTop="33" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="4844" fromTop="28" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="1046" fromTop="30" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Create.cshtml" caret="293" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Delete.cshtml" caret="148" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Details.cshtml" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Details.cshtml" caret="365" fromTop="17" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Task/f:Edit.cshtml" caret="385" fromTop="13" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="2740" fromTop="10" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="3904" fromTop="20" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="2060" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -76,7 +80,7 @@
       <Item value="UserTask`0" priority="126" />
       <Item value="public" priority="379" />
       <Item value="UserTaskEntityConfiguration`0" priority="31" />
-      <Item value="int" priority="127" />
+      <Item value="int" priority="191" />
       <Item value="string" priority="31" />
       <Item value="class" priority="92" />
       <Item value="UserTaskType`0" priority="144" />
@@ -88,7 +92,7 @@
       <Item value="Data" priority="25" />
       <Item value="Context" priority="25" />
       <Item value="TaskContext" priority="117" />
-      <Item value="context" priority="319" />
+      <Item value="context" priority="351" />
       <Item value="Name" priority="191" />
       <Item value="var" priority="191" />
       <Item value="UserTaskType" priority="85" />
@@ -128,12 +132,12 @@
       <Item value="Exception`0" priority="31" />
       <Item value="static" priority="31" />
       <Item value="_dateTime" priority="96" />
-      <Item value="if" priority="223" />
+      <Item value="if" priority="255" />
       <Item value="date" priority="63" />
       <Item value="else" priority="31" />
       <Item value="AuthorizeAttribute`0" priority="63" />
       <Item value="override" priority="31" />
-      <Item value="return" priority="95" />
+      <Item value="return" priority="159" />
       <Item value="true" priority="31" />
       <Item value="FormsAuthentication`0" priority="31" />
       <Item value="AuthorizeTaskSystem" priority="25" />
@@ -142,13 +146,21 @@
       <Item value="Membership`0" priority="63" />
       <Item value="ITaskMembership`0" priority="31" />
       <Item value="Url" priority="29" />
-      <Item value="ModelState" priority="63" />
+      <Item value="ModelState" priority="95" />
       <Item value="Action`0" priority="31" />
-      <Item value="ActionResult`0" priority="31" />
-      <Item value="View`0" priority="32" />
-      <Item value="ModelState`0" priority="31" />
+      <Item value="ActionResult`0" priority="63" />
+      <Item value="View`0" priority="96" />
+      <Item value="ModelState`0" priority="63" />
       <Item value="Display" priority="31" />
-      <Item value="i" priority="31" />
+      <Item value="i" priority="63" />
+      <Item value="protected" priority="31" />
+      <Item value="base" priority="63" />
+      <Item value="actionSuccess" priority="31" />
+      <Item value="actionFailure" priority="31" />
+      <Item value="action" priority="32" />
+      <Item value="try" priority="31" />
+      <Item value="DeleteActionResult" priority="29" />
+      <Item value="FormActionResult" priority="59" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
       <Item value="Remove`0" priority="27" />
@@ -263,10 +275,13 @@
       <Item value="Raw`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.ModelStateDictionary">
-      <Item value="IsValid" priority="53" />
+      <Item value="IsValid" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.ControllerContext">
-      <Item value="Controller" priority="53" />
+      <Item value="Controller" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="ToString`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

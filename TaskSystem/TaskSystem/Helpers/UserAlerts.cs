@@ -65,6 +65,7 @@ namespace TaskSystem.Helpers
 
             if (!_userList.ContainsKey(providerUserKey))
             {
+                //not thread safe - but unlikely to add same key here!
                 _userList.Add(providerUserKey, new UserAlert() { Value = true, LastChecked = DateTime.Now.Date });
             }
             var userAlert = _userList[providerUserKey];

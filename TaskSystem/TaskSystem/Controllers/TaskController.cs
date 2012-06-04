@@ -100,13 +100,15 @@ namespace TaskSystem.Controllers
         {
             try
             {
-
-                return new UpdateActionResult(RedirectToAction("Details"), View(), () =>
-                                                  {
-                                                      _context.Save(userTask);
-                                                      _context.SaveChanges();
-                                                  });
-
+                if (ModelState.IsValid)
+                {
+                    return new FormActionResult(RedirectToAction("Details"), View(), () =>
+                                                                                         {
+                                                                                             _context.Save(userTask);
+                                                                                             _context.SaveChanges();
+                                                                                         });
+                }
+                return View();
             }
             catch (Exception ex)
             {
@@ -132,12 +134,15 @@ namespace TaskSystem.Controllers
         {
             try
             {
-
-                return new UpdateActionResult(RedirectToAction("Details"), View(), () =>
-                            {
-                                _context.Entry(userTask).State = EntityState.Modified;
-                                _context.SaveChanges();
-                            });
+                if (ModelState.IsValid)
+                {
+                    return new FormActionResult(RedirectToAction("Details"), View(), () =>
+                                                        {
+                                                            _context.Entry(userTask).State = EntityState.Modified;
+                                                            _context.SaveChanges();
+                                                        });
+                }
+                return View();
 
             }
             catch
@@ -165,7 +170,7 @@ namespace TaskSystem.Controllers
             {
                 var task = _context.Tasks.FirstOrDefault(x => x.Id == usertask.Id);
 
-                return new UpdateActionResult(RedirectToAction("Details"), View(), () =>
+                return new FormActionResult(RedirectToAction("Details"), View(), () =>
                                     {
                                         _context.Remove(task);
                                         _context.SaveChanges();
