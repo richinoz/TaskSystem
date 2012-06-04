@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
@@ -87,6 +90,7 @@
     </Compile>
     <Compile Include="Helpers\AuthorizeTaskSystemAttribute.cs" />
     <Compile Include="Helpers\DateTimeExtensions.cs" />
+    <Compile Include="Helpers\ElmahHandledErrorLoggerFilter.cs" />
     <Compile Include="Helpers\UpdateActionResult.cs" />
     <Compile Include="Helpers\UserAlerts.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -94,6 +98,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Content\calendar.gif" />
     <Content Include="Scripts\Custom\dateFuncs.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />

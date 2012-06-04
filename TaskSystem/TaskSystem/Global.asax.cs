@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using TaskSystem.Data.Context;
+using TaskSystem.Helpers;
 
 namespace TaskSystem
 {
@@ -16,6 +17,7 @@ namespace TaskSystem
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new ElmahHandledErrorLoggerFilter());
             filters.Add(new HandleErrorAttribute());
         }
 
