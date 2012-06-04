@@ -8,24 +8,30 @@ namespace TaskSystem.Helpers
     /// </summary>
     public class UpdateActionResult : ActionResult
     {
-        private readonly ActionResult _actionResult;
+        private readonly ActionResult _actionSuccess;
+        private readonly ActionResult _actionFailure;
         private Action _action { get; set; }
 
-        public UpdateActionResult(ActionResult actionResult, Action action)
+        public UpdateActionResult(ActionResult actionSuccess, ActionResult actionFailure, Action action)
         {
-            _actionResult = actionResult;
+            _actionSuccess = actionSuccess;
+            _actionFailure = actionFailure;
             _action = action;
         }
 
         public override void ExecuteResult(ControllerContext context)
         {
-            if (_action != null)
-                _action.Invoke();
+            if (context.Controller.ViewData.ModelState.IsValid)
+            {
+                if (_action != null)
+                    _action.Invoke();
 
-            UserAlerts.UpdateUser();
+                UserAlerts.UpdateUser();
 
-            _actionResult.ExecuteResult(context);
+                _actionSuccess.ExecuteResult(context);
+            }
 
+            _actionFailure.ExecuteResult(context);
         }
     }
 }
