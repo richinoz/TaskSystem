@@ -9,11 +9,9 @@ using System.Linq;
 
 namespace TaskSystem.Helpers
 {
-
     /// <summary>
     /// Only users with tasks for today will hit the database (after inital read)
     /// </summary>
-    [Authorize]
     public class UserAlerts
     {
         private class UserAlert
@@ -49,6 +47,11 @@ namespace TaskSystem.Helpers
         /// <returns></returns>
         public static IEnumerable<UserTask> GetAlertsForUser()
         {
+            var user = Membership.GetUser(true);
+
+            if (user == null)
+                return new List<UserTask>();
+
             var date = DateTime.Now.Date;
 
             if (_listCreateDate.AddDays(1) < date)
@@ -57,8 +60,6 @@ namespace TaskSystem.Helpers
                 _userList.Clear();
                 _listCreateDate = date;
             }
-
-            var user = Membership.GetUser(true);
 
             var providerUserKey = (Guid)user.ProviderUserKey;
 
