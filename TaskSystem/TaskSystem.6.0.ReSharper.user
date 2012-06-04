@@ -13,25 +13,25 @@
   </UnitTestSessions>
   <RecentFiles>
     <RecentFiles>
-      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="818" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="59" fromTop="2" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:DateTimeExtensions.cs" caret="0" fromTop="0" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UpdateActionResult.cs" caret="71" fromTop="5" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="327" fromTop="8" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="340" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1035" fromTop="9" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_Layout.cshtml" caret="940" fromTop="19" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="66" fromTop="5" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="212" fromTop="11" />
+      <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:AuthorizeTaskSystemAttribute.cs" caret="373" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="408" fromTop="20" />
     </RecentFiles>
     <RecentEdits>
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="2801" fromTop="9" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1314" fromTop="13" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="2136" fromTop="32" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1738" fromTop="28" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="733" fromTop="16" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1026" fromTop="11" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="497" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1295" fromTop="13" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="2196" fromTop="32" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="714" fromTop="16" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1007" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="478" fromTop="11" />
       <File id="E69FCEFF-BFB4-43A4-8BCB-86672DF057AE/f:ContextTests.cs" caret="0" fromTop="0" />
-      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1537" fromTop="16" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1649" fromTop="16" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="0" fromTop="0" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="263" fromTop="12" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Shared/f:_AlertsPartial.cshtml" caret="164" fromTop="8" />
@@ -43,6 +43,18 @@
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="571" fromTop="6" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="290" fromTop="3" />
       <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:TaskController.cs" caret="571" fromTop="16" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="353" fromTop="8" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="353" fromTop="1" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1850" fromTop="12" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Helpers/f:UserAlerts.cs" caret="1558" fromTop="8" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="419" fromTop="10" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Controllers/f:HomeController.cs" caret="212" fromTop="11" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="316" fromTop="4" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="316" fromTop="15" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="150" fromTop="7" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="499" fromTop="22" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="338" fromTop="15" />
+      <File id="6CF683CC-A37B-49A4-AD96-98715903D3BF/d:Views/d:Home/f:About.cshtml" caret="435" fromTop="23" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -54,11 +66,11 @@
       <Item value="IuserTasks" priority="32" />
       <Item value="Tasks" priority="64" />
       <Item value="UserTask`0" priority="126" />
-      <Item value="public" priority="285" />
+      <Item value="public" priority="379" />
       <Item value="UserTaskEntityConfiguration`0" priority="31" />
       <Item value="int" priority="31" />
       <Item value="string" priority="31" />
-      <Item value="class" priority="61" />
+      <Item value="class" priority="92" />
       <Item value="UserTaskType`0" priority="144" />
       <Item value="Property`1" priority="95" />
       <Item value="HasRequired`1" priority="95" />
@@ -85,7 +97,7 @@
       <Item value="long" priority="63" />
       <Item value="model" priority="61" />
       <Item value="Model" priority="29" />
-      <Item value="Authorize" priority="63" />
+      <Item value="Authorize" priority="95" />
       <Item value="membershipUser" priority="31" />
       <Item value="false" priority="63" />
       <Item value="test" priority="31" />
@@ -96,7 +108,7 @@
       <Item value="UserId" priority="27" />
       <Item value="taskContext" priority="32" />
       <Item value="scan" priority="31" />
-      <Item value="Html" priority="29" />
+      <Item value="Html" priority="59" />
       <Item value="ViewBag" priority="29" />
       <Item value="Controllers" priority="31" />
       <Item value="userTaskType" priority="63" />
@@ -113,9 +125,15 @@
       <Item value="else" priority="31" />
       <Item value="AuthorizeAttribute`0" priority="63" />
       <Item value="override" priority="31" />
-      <Item value="return" priority="63" />
+      <Item value="return" priority="95" />
       <Item value="true" priority="31" />
       <Item value="FormsAuthentication`0" priority="31" />
+      <Item value="AuthorizeTaskSystem" priority="25" />
+      <Item value="interface" priority="30" />
+      <Item value="bool" priority="31" />
+      <Item value="Membership`0" priority="63" />
+      <Item value="ITaskMembership`0" priority="31" />
+      <Item value="Url" priority="29" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
       <Item value="Remove`0" priority="27" />
@@ -160,8 +178,9 @@
     <ItemStatistics item="RazorTransitionCompletionContext">
       <Item value="model" priority="9" />
       <Item value="Model" priority="7" />
-      <Item value="Html" priority="7" />
+      <Item value="Html" priority="15" />
       <Item value="ViewBag" priority="7" />
+      <Item value="Url" priority="7" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Nullable`1">
       <Item value="HasValue" priority="26" />
@@ -188,6 +207,13 @@
     </ItemStatistics>
     <ItemStatistics item="HtmlCodeCompletionContext">
       <Item value="td" priority="5" />
+      <Item value="h3" priority="11" />
+      <Item value="li" priority="5" />
+      <Item value="br" priority="11" />
+      <Item value="ul" priority="5" />
+      <Item value="h5" priority="5" />
+      <Item value="div" priority="5" />
+      <Item value="p" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.Database">
       <Item value="CompatibleWithModel`0" priority="26" />
@@ -216,6 +242,10 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Web.Security.FormsAuthentication">
       <Item value="SignOut`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="RouteLink`0" priority="26" />
+      <Item value="Raw`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
